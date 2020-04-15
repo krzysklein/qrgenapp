@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'qrgenapp';
+  bankAccountNumber = '';
+  amount = 1;
+  name = '';
+  title = '';
+  qrCodeValue = '';
+
+  generateQrCode() {
+    this.qrCodeValue = `||${this.bankAccountNumber}|${this.amount * 100}|${this.name}|${this.title}|||`;
+  }
 }
